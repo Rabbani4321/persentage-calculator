@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Percentage Calculator - Free Online Calculator</title>
+
+    <meta
+        name="description"
+        content="Free online percentage calculator. Calculate percentages, find what percentage one number is of another, and calculate percentage increase or decrease."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="Percentage Calculator"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Percentage Calculator - Free Online Calculator"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate percentages, percentage increase and decrease with this free online calculator."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Main Calculator -->
+    <main class="calculator">
+
+        <h1>Percentage Calculator</h1>
+
+        <p>
+            Calculate percentages quickly and easily.
+        </p>
+
+
+        <!-- Calculator 1 -->
+        <section>
+
+            <h2>What is X% of Y?</h2>
+
+            <label for="percentage">
+                Percentage
+            </label>
+
+            <input
+                type="number"
+                id="percentage"
+                placeholder="Enter percentage"
+                inputmode="decimal"
+            >
+
+            <label for="number">
+                Number
+            </label>
+
+            <input
+                type="number"
+                id="number"
+                placeholder="Enter number"
+                inputmode="decimal"
+            >
+
+            <button onclick="calculatePercentage()">
+                Calculate
+            </button>
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <!-- Calculator 2 -->
+        <section>
+
+            <h2>X is what % of Y?</h2>
+
+            <label for="part">
+                Part
+            </label>
+
+            <input
+                type="number"
+                id="part"
+                placeholder="Enter part"
+                inputmode="decimal"
+            >
+
+            <label for="whole">
+                Whole
+            </label>
+
+            <input
+                type="number"
+                id="whole"
+                placeholder="Enter whole"
+                inputmode="decimal"
+            >
+
+            <button onclick="calculateWhatPercentage()">
+                Calculate
+            </button>
+
+            <div id="percentageResult"></div>
+
+        </section>
+
+
+        <!-- Calculator 3 -->
+        <section>
+
+            <h2>Percentage Increase / Decrease</h2>
+
+            <label for="oldValue">
+                Old Value
+            </label>
+
+            <input
+                type="number"
+                id="oldValue"
+                placeholder="Enter old value"
+                inputmode="decimal"
+            >
+
+            <label for="newValue">
+                New Value
+            </label>
+
+            <input
+                type="number"
+                id="newValue"
+                placeholder="Enter new value"
+                inputmode="decimal"
+            >
+
+            <button onclick="calculateChange()">
+                Calculate
+            </button>
+
+            <div id="changeResult"></div>
+
+        </section>
+
+
+        <!-- Clear Button -->
+        <button
+            class="clear-btn"
+            onclick="clearCalculator()"
+        >
+            Clear All
+        </button>
+
+
+        <!-- SEO Information -->
+        <section class="info-section">
+
+            <h2>How to Calculate Percentage</h2>
+
+            <p>
+                To calculate a percentage of a number,
+                multiply the number by the percentage
+                and divide by 100.
+            </p>
+
+            <p>
+                For example, 20% of 500 is 100.
+            </p>
+
+        </section>
+
+
+        <!-- Formula -->
+        <section class="info-section">
+
+            <h2>Percentage Formula</h2>
+
+            <p>
+                Percentage = (Part ÷ Whole) × 100
+            </p>
+
+        </section>
+
+
+        <!-- Examples -->
+        <section class="info-section">
+
+            <h2>Percentage Calculator Examples</h2>
+
+            <p>
+                <strong>Example 1:</strong>
+                20% of 500 = 100
+            </p>
+
+            <p>
+                <strong>Example 2:</strong>
+                100 is 20% of 500
+            </p>
+
+            <p>
+                <strong>Example 3:</strong>
+                Increasing 500 to 600 is a 20% increase.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
