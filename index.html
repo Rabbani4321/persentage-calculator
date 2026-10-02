@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-    <!-- Basic SEO -->
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +10,16 @@
 
     <meta
         name="description"
-        content="Free online percentage calculator. Calculate percentages, find what percentage one number is of another, and calculate percentage increase or decrease."
+        content="Use our free online percentage calculator to calculate percentages, find what percentage one number is of another, and calculate percentage increase or decrease."
     >
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+    <meta name="robots" content="index, follow">
 
-    <meta
-        name="author"
-        content="Percentage Calculator"
+    <meta name="author" content="Percentage Calculator">
+
+    <link
+        rel="canonical"
+        href="https://rabbani4321.github.io/percentage-calculator/"
     >
 
     <!-- Open Graph -->
@@ -33,7 +30,7 @@
 
     <meta
         property="og:description"
-        content="Calculate percentages, percentage increase and decrease with this free online calculator."
+        content="Free online percentage calculator for calculating percentages, percentage increase and decrease."
     >
 
     <meta
@@ -41,28 +38,84 @@
         content="website"
     >
 
+    <meta
+        property="og:url"
+        content="https://rabbani4321.github.io/percentage-calculator/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Percentage Calculator"
+    >
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Percentage Calculator",
+        "url": "https://rabbani4321.github.io/percentage-calculator/",
+        "description": "Free online percentage calculator."
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do you calculate a percentage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate a percentage, divide the part by the whole and multiply the result by 100."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is 20% of 500?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "20% of 500 is 100."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you calculate percentage increase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Subtract the old value from the new value, divide the result by the old value, and multiply by 100."
+                }
+            }
+        ]
+    }
+    </script>
 
 </head>
 
 
 <body>
 
-    <!-- Main Calculator -->
     <main class="calculator">
 
-        <h1>Percentage Calculator</h1>
+        <header>
+            <h1>Percentage Calculator</h1>
 
-        <p>
-            Calculate percentages quickly and easily.
-        </p>
+            <p>
+                Calculate percentages quickly and easily with our free online percentage calculator.
+            </p>
+        </header>
 
 
         <!-- Calculator 1 -->
-        <section>
+        <section aria-labelledby="percentage-calculation">
 
-            <h2>What is X% of Y?</h2>
+            <h2 id="percentage-calculation">What is X% of Y?</h2>
 
             <label for="percentage">
                 Percentage
@@ -73,6 +126,7 @@
                 id="percentage"
                 placeholder="Enter percentage"
                 inputmode="decimal"
+                aria-label="Percentage"
             >
 
             <label for="number">
@@ -84,21 +138,28 @@
                 id="number"
                 placeholder="Enter number"
                 inputmode="decimal"
+                aria-label="Number"
             >
 
-            <button onclick="calculatePercentage()">
+            <button
+                type="button"
+                onclick="calculatePercentage()"
+            >
                 Calculate
             </button>
 
-            <div id="result"></div>
+            <div
+                id="result"
+                aria-live="polite"
+            ></div>
 
         </section>
 
 
         <!-- Calculator 2 -->
-        <section>
+        <section aria-labelledby="what-percentage">
 
-            <h2>X is what % of Y?</h2>
+            <h2 id="what-percentage">X is what % of Y?</h2>
 
             <label for="part">
                 Part
@@ -109,6 +170,7 @@
                 id="part"
                 placeholder="Enter part"
                 inputmode="decimal"
+                aria-label="Part"
             >
 
             <label for="whole">
@@ -120,21 +182,28 @@
                 id="whole"
                 placeholder="Enter whole"
                 inputmode="decimal"
+                aria-label="Whole"
             >
 
-            <button onclick="calculateWhatPercentage()">
+            <button
+                type="button"
+                onclick="calculateWhatPercentage()"
+            >
                 Calculate
             </button>
 
-            <div id="percentageResult"></div>
+            <div
+                id="percentageResult"
+                aria-live="polite"
+            ></div>
 
         </section>
 
 
         <!-- Calculator 3 -->
-        <section>
+        <section aria-labelledby="percentage-change">
 
-            <h2>Percentage Increase / Decrease</h2>
+            <h2 id="percentage-change">Percentage Increase / Decrease</h2>
 
             <label for="oldValue">
                 Old Value
@@ -145,6 +214,7 @@
                 id="oldValue"
                 placeholder="Enter old value"
                 inputmode="decimal"
+                aria-label="Old value"
             >
 
             <label for="newValue">
@@ -156,19 +226,27 @@
                 id="newValue"
                 placeholder="Enter new value"
                 inputmode="decimal"
+                aria-label="New value"
             >
 
-            <button onclick="calculateChange()">
+            <button
+                type="button"
+                onclick="calculateChange()"
+            >
                 Calculate
             </button>
 
-            <div id="changeResult"></div>
+            <div
+                id="changeResult"
+                aria-live="polite"
+            ></div>
 
         </section>
 
 
         <!-- Clear Button -->
         <button
+            type="button"
             class="clear-btn"
             onclick="clearCalculator()"
         >
@@ -176,15 +254,14 @@
         </button>
 
 
-        <!-- SEO Information -->
+        <!-- Information -->
         <section class="info-section">
 
             <h2>How to Calculate Percentage</h2>
 
             <p>
-                To calculate a percentage of a number,
-                multiply the number by the percentage
-                and divide by 100.
+                To calculate a percentage of a number, multiply the number
+                by the percentage and divide by 100.
             </p>
 
             <p>
@@ -228,7 +305,43 @@
 
         </section>
 
+
+        <!-- FAQ -->
+        <section class="info-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>How do you calculate a percentage?</h3>
+
+            <p>
+                Divide the part by the whole and multiply the result by 100.
+            </p>
+
+
+            <h3>What is 20% of 500?</h3>
+
+            <p>
+                20% of 500 is 100.
+            </p>
+
+
+            <h3>How do you calculate percentage increase?</h3>
+
+            <p>
+                Subtract the old value from the new value, divide the result
+                by the old value, and multiply by 100.
+            </p>
+
+        </section>
+
     </main>
+
+
+    <footer>
+        <p>
+            © 2026 Percentage Calculator. All rights reserved.
+        </p>
+    </footer>
 
 
     <!-- JavaScript -->
