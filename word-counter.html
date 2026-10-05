@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,11 +10,23 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Word Counter - Free Online Word Counter | Creator Toolkit</title>
+    <title>
+        Word Counter - Free Online Word & Character Counter | Creator Toolkit
+    </title>
 
     <meta
         name="description"
-        content="Free online word counter. Count words, characters, sentences and paragraphs quickly with Creator Toolkit."
+        content="Free online word counter to count words, characters, sentences and paragraphs instantly. Simple, fast and easy to use on mobile and desktop."
+    >
+
+    <meta
+        name="keywords"
+        content="word counter, online word counter, free word counter, character counter, word and character counter, sentence counter, paragraph counter"
+    >
+
+    <meta
+        name="author"
+        content="Creator Toolkit"
     >
 
     <meta
@@ -21,87 +34,112 @@
         content="index, follow"
     >
 
+    <!-- Canonical URL -->
+
+    <link
+        rel="canonical"
+        href="https://rabbani4321.github.io/persentage-calculator/word-counter.html"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Word Counter - Free Online Word & Character Counter"
+    >
+
+    <meta
+        property="og:description"
+        content="Count words, characters, sentences and paragraphs instantly with this free online word counter."
+    >
+
+    <meta
+        property="og:url"
+        content="https://rabbani4321.github.io/persentage-calculator/word-counter.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Creator Toolkit"
+    >
+
+
+    <!-- CSS -->
+
     <link
         rel="stylesheet"
         href="style.css"
     >
 
-    <style>
 
-        .word-counter-container {
-            max-width: 900px;
-            margin: 30px auto;
+    <!-- WebApplication Structured Data -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Word Counter",
+        "url": "https://rabbani4321.github.io/persentage-calculator/word-counter.html",
+        "description": "Free online word counter for counting words, characters, sentences and paragraphs.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
         }
+    }
+    </script>
 
-        .text-area {
-            width: 100%;
-            min-height: 300px;
-            padding: 18px;
-            border: 1px solid #d1d5db;
-            border-radius: 12px;
-            font-size: 16px;
-            line-height: 1.6;
-            resize: vertical;
-            outline: none;
-        }
 
-        .text-area:focus {
-            border-color: #4f46e5;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-        }
+    <!-- FAQ Structured Data -->
 
-        .counter-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .counter-box {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .counter-box h3 {
-            font-size: 14px;
-            color: #6b7280;
-            margin-bottom: 8px;
-        }
-
-        .counter-box strong {
-            font-size: 28px;
-            color: #1f2937;
-        }
-
-        .clear-button {
-            background: #e5e7eb;
-            color: #374151;
-        }
-
-        .clear-button:hover {
-            background: #d1d5db;
-        }
-
-        @media (max-width: 700px) {
-
-            .counter-grid {
-                grid-template-columns: repeat(2, 1fr);
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this word counter free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Creator Toolkit word counter is free to use online."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the word counter on mobile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The word counter is designed to work on smartphones, tablets and desktop computers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the word counter count characters?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The tool displays the total number of characters in the entered text."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the word counter count sentences and paragraphs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The tool counts words, characters, sentences and paragraphs."
+                }
             }
-
-        }
-
-        @media (max-width: 450px) {
-
-            .counter-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
+        ]
+    }
+    </script>
 
 </head>
 
@@ -118,14 +156,37 @@
         </h1>
 
         <p>
-            Free Online Word & Character Counter
+            Free Online Word &amp; Character Counter
         </p>
 
     </header>
 
 
-
     <main class="word-counter-container">
+
+
+        <!-- Back to Homepage -->
+
+        <section class="info-section">
+
+            <p>
+
+                <a href="index.html">
+                    ← Back to Creator Toolkit
+                </a>
+
+            </p>
+
+            <h2>
+                Free Online Word Counter
+            </h2>
+
+            <p>
+                Count words, characters, sentences and paragraphs
+                instantly with this simple online word counter.
+            </p>
+
+        </section>
 
 
         <!-- Tool -->
@@ -146,6 +207,7 @@
                 id="textInput"
                 class="text-area"
                 placeholder="Type or paste your text here..."
+                aria-label="Enter text to count words and characters"
                 oninput="countText()"
             ></textarea>
 
@@ -162,6 +224,7 @@
             <!-- Counters -->
 
             <div class="counter-grid">
+
 
                 <div class="counter-box">
 
@@ -219,8 +282,7 @@
         </section>
 
 
-
-        <!-- Information -->
+        <!-- About -->
 
         <section class="info-section">
 
@@ -234,13 +296,17 @@
             </p>
 
             <p>
-                It can also count sentences and paragraphs, making it
-                useful for students, writers, bloggers, creators and
-                anyone who works with text.
+                It also counts sentences and paragraphs, making it
+                useful for students, writers, bloggers, content
+                creators and anyone who works with text.
+            </p>
+
+            <p>
+                The tool works directly in your browser and does not
+                require any software installation.
             </p>
 
         </section>
-
 
 
         <!-- How To Use -->
@@ -251,34 +317,54 @@
                 How to Use the Word Counter
             </h2>
 
+
             <h3>
-                Step 1
+                Step 1: Enter Your Text
             </h3>
 
             <p>
                 Type or paste your text into the text box.
             </p>
 
+
             <h3>
-                Step 2
+                Step 2: View Your Counts
             </h3>
 
             <p>
-                The tool will automatically calculate your word,
+                The tool automatically calculates your word,
                 character, sentence and paragraph counts.
             </p>
 
+
             <h3>
-                Step 3
+                Step 3: Clear the Text
             </h3>
 
             <p>
-                Use the Clear Text button to remove the text and
-                start again.
+                Click the Clear Text button when you want to remove
+                the current text and start again.
             </p>
 
         </section>
 
+
+        <!-- Who Can Use -->
+
+        <section class="info-section">
+
+            <h2>
+                Who Can Use This Word Counter?
+            </h2>
+
+            <p>
+                This online word counter can be useful for students,
+                writers, bloggers, teachers, content creators,
+                social media users and anyone who needs to check
+                the length of written text.
+            </p>
+
+        </section>
 
 
         <!-- FAQ -->
@@ -295,12 +381,13 @@
             </h3>
 
             <p>
-                Yes. The Creator Toolkit word counter is free to use.
+                Yes. The Creator Toolkit word counter is free to use
+                online.
             </p>
 
 
             <h3>
-                Can I use it on mobile?
+                Can I use the word counter on mobile?
             </h3>
 
             <p>
@@ -310,7 +397,7 @@
 
 
             <h3>
-                Does it count characters?
+                Does the word counter count characters?
             </h3>
 
             <p>
@@ -320,19 +407,28 @@
 
 
             <h3>
-                Does the tool store my text?
+                Does it count sentences and paragraphs?
             </h3>
 
             <p>
-                This browser-based counter processes the text entered
-                into the tool to calculate the displayed counts.
+                Yes. The tool counts words, characters, sentences
+                and paragraphs.
+            </p>
+
+
+            <h3>
+                Do I need to install software?
+            </h3>
+
+            <p>
+                No. You can use the word counter directly from
+                your web browser.
             </p>
 
         </section>
 
 
     </main>
-
 
 
     <!-- Footer -->
@@ -379,7 +475,6 @@
     </footer>
 
 
-
     <!-- Word Counter JavaScript -->
 
     <script>
@@ -398,14 +493,16 @@
 
             if (trimmedText.length > 0) {
 
-                words = trimmedText.split(/\s+/).length;
+                words =
+                    trimmedText.split(/\s+/).length;
 
             }
 
 
             /* Characters */
 
-            const characters = text.length;
+            const characters =
+                text.length;
 
 
             /* Sentences */
@@ -417,7 +514,10 @@
                 sentences =
                     trimmedText
                         .split(/[.!?]+/)
-                        .filter(sentence => sentence.trim().length > 0)
+                        .filter(
+                            sentence =>
+                                sentence.trim().length > 0
+                        )
                         .length;
 
             }
@@ -432,7 +532,10 @@
                 paragraphs =
                     trimmedText
                         .split(/\n\s*\n/)
-                        .filter(paragraph => paragraph.trim().length > 0)
+                        .filter(
+                            paragraph =>
+                                paragraph.trim().length > 0
+                        )
                         .length;
 
             }
