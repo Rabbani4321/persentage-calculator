@@ -16,7 +16,17 @@
 
     <meta
         name="description"
-        content="Free online text formatter. Convert text to uppercase, lowercase, title case and clean extra spaces with Creator Toolkit."
+        content="Free online text formatter to convert text to uppercase, lowercase, title case and remove extra spaces. Format and clean text quickly on any device."
+    >
+
+    <meta
+        name="keywords"
+        content="text formatter, online text formatter, free text formatter, uppercase converter, lowercase converter, title case converter, remove extra spaces"
+    >
+
+    <meta
+        name="author"
+        content="Creator Toolkit"
     >
 
     <meta
@@ -24,84 +34,112 @@
         content="index, follow"
     >
 
+    <!-- Canonical URL -->
+
+    <link
+        rel="canonical"
+        href="https://rabbani4321.github.io/persentage-calculator/text-formatter.html"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Text Formatter - Free Online Text Formatting Tool"
+    >
+
+    <meta
+        property="og:description"
+        content="Convert text to uppercase, lowercase, title case and remove extra spaces with this free online text formatter."
+    >
+
+    <meta
+        property="og:url"
+        content="https://rabbani4321.github.io/persentage-calculator/text-formatter.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Creator Toolkit"
+    >
+
+
+    <!-- CSS -->
+
     <link
         rel="stylesheet"
         href="style.css"
     >
 
-    <style>
 
-        .formatter-container {
-            max-width: 900px;
-            margin: 30px auto;
+    <!-- WebApplication Structured Data -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Text Formatter",
+        "url": "https://rabbani4321.github.io/persentage-calculator/text-formatter.html",
+        "description": "Free online text formatter for converting text to uppercase, lowercase, title case and removing extra spaces.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
         }
+    }
+    </script>
 
 
-        .formatter-textarea {
-            width: 100%;
-            min-height: 280px;
+    <!-- FAQ Structured Data -->
 
-            padding: 18px;
-
-            border: 1px solid #d1d5db;
-            border-radius: 12px;
-
-            font-size: 16px;
-            line-height: 1.6;
-
-            resize: vertical;
-            outline: none;
-
-            font-family: Arial, sans-serif;
-        }
-
-
-        .formatter-textarea:focus {
-            border-color: #4f46e5;
-
-            box-shadow:
-                0 0 0 3px
-                rgba(79, 70, 229, 0.1);
-        }
-
-
-        .button-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 12px;
-
-            margin-top: 20px;
-        }
-
-
-        .button-grid button {
-            margin-top: 0;
-        }
-
-
-        .clear-button {
-            background: #e5e7eb;
-            color: #374151;
-        }
-
-
-        .clear-button:hover {
-            background: #d1d5db;
-        }
-
-
-        @media (max-width: 600px) {
-
-            .button-grid {
-                grid-template-columns: 1fr;
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this text formatter free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Creator Toolkit text formatter is free to use online."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the text formatter on mobile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The text formatter is designed to work on smartphones, tablets and computers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I convert text to uppercase and lowercase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You can convert text to uppercase, lowercase and title case."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I remove extra spaces from text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Remove Extra Spaces option cleans unnecessary spaces from your text."
+                }
             }
-
-        }
-
-    </style>
+        ]
+    }
+    </script>
 
 </head>
 
@@ -124,8 +162,31 @@
     </header>
 
 
-
     <main class="formatter-container">
+
+
+        <!-- Back to Homepage -->
+
+        <section class="info-section">
+
+            <p>
+
+                <a href="index.html">
+                    ← Back to Creator Toolkit
+                </a>
+
+            </p>
+
+            <h2>
+                Free Online Text Formatter
+            </h2>
+
+            <p>
+                Format and clean your text quickly using our free
+                online text formatting tool.
+            </p>
+
+        </section>
 
 
         <!-- Text Formatter -->
@@ -137,8 +198,8 @@
             </h2>
 
             <p>
-                Type or paste your text below and use the buttons
-                to format it instantly.
+                Type or paste your text below and choose a formatting
+                option to change it instantly.
             </p>
 
 
@@ -146,6 +207,7 @@
                 id="textInput"
                 class="formatter-textarea"
                 placeholder="Type or paste your text here..."
+                aria-label="Enter text to format"
             ></textarea>
 
 
@@ -211,10 +273,10 @@
                     margin-top:15px;
                     font-weight:bold;
                 "
+                aria-live="polite"
             ></p>
 
         </section>
-
 
 
         <!-- About -->
@@ -227,22 +289,64 @@
 
             <p>
                 Creator Toolkit's free text formatter helps you
-                quickly change and clean your text.
+                quickly change and clean your text online.
             </p>
 
             <p>
-                You can convert text to uppercase, lowercase,
-                title case and remove unnecessary spaces.
+                You can convert text to uppercase, lowercase and
+                title case, as well as remove unnecessary spaces.
             </p>
 
             <p>
-                This tool is useful for students, writers,
-                bloggers, content creators and anyone who works
-                with text.
+                The tool is useful for students, writers, bloggers,
+                content creators and anyone who works with text.
             </p>
 
         </section>
 
+
+        <!-- Features -->
+
+        <section class="info-section">
+
+            <h2>
+                Text Formatting Features
+            </h2>
+
+            <h3>
+                Uppercase Converter
+            </h3>
+
+            <p>
+                Convert your text into uppercase letters with one click.
+            </p>
+
+            <h3>
+                Lowercase Converter
+            </h3>
+
+            <p>
+                Convert text into lowercase letters quickly.
+            </p>
+
+            <h3>
+                Title Case Converter
+            </h3>
+
+            <p>
+                Convert words into title case for cleaner headings
+                and text.
+            </p>
+
+            <h3>
+                Remove Extra Spaces
+            </h3>
+
+            <p>
+                Clean unnecessary spaces from your text automatically.
+            </p>
+
+        </section>
 
 
         <!-- How To Use -->
@@ -255,7 +359,7 @@
 
 
             <h3>
-                Step 1
+                Step 1: Enter Your Text
             </h3>
 
             <p>
@@ -264,17 +368,17 @@
 
 
             <h3>
-                Step 2
+                Step 2: Choose a Formatting Option
             </h3>
 
             <p>
-                Choose a formatting option such as uppercase,
-                lowercase or title case.
+                Choose uppercase, lowercase, title case or remove
+                extra spaces.
             </p>
 
 
             <h3>
-                Step 3
+                Step 3: Copy Your Text
             </h3>
 
             <p>
@@ -283,7 +387,6 @@
             </p>
 
         </section>
-
 
 
         <!-- FAQ -->
@@ -301,7 +404,7 @@
 
             <p>
                 Yes. The Creator Toolkit text formatter is free
-                to use.
+                to use online.
             </p>
 
 
@@ -312,6 +415,26 @@
             <p>
                 Yes. The tool is designed to work on smartphones,
                 tablets and computers.
+            </p>
+
+
+            <h3>
+                Can I convert text to uppercase and lowercase?
+            </h3>
+
+            <p>
+                Yes. You can convert text to uppercase, lowercase
+                and title case.
+            </p>
+
+
+            <h3>
+                Can I remove extra spaces from text?
+            </h3>
+
+            <p>
+                Yes. The Remove Extra Spaces option cleans
+                unnecessary spaces from your text.
             </p>
 
 
@@ -328,7 +451,6 @@
 
 
     </main>
-
 
 
     <!-- Footer -->
@@ -375,7 +497,6 @@
     </footer>
 
 
-
     <!-- JavaScript -->
 
     <script>
@@ -408,7 +529,9 @@
             textInput.value =
                 textInput.value.toUpperCase();
 
-            showMessage("Text converted to uppercase.");
+            showMessage(
+                "Text converted to uppercase."
+            );
 
         }
 
@@ -420,7 +543,9 @@
             textInput.value =
                 textInput.value.toLowerCase();
 
-            showMessage("Text converted to lowercase.");
+            showMessage(
+                "Text converted to lowercase."
+            );
 
         }
 
@@ -442,7 +567,9 @@
                     }
                 );
 
-            showMessage("Text converted to title case.");
+            showMessage(
+                "Text converted to title case."
+            );
 
         }
 
@@ -456,7 +583,9 @@
                     .replace(/\s+/g, " ")
                     .trim();
 
-            showMessage("Extra spaces removed.");
+            showMessage(
+                "Extra spaces removed."
+            );
 
         }
 
@@ -467,7 +596,9 @@
 
             if (textInput.value.trim() === "") {
 
-                showMessage("Please enter some text first.");
+                showMessage(
+                    "Please enter some text first."
+                );
 
                 return;
 
@@ -479,7 +610,9 @@
             );
 
 
-            showMessage("Text copied successfully.");
+            showMessage(
+                "Text copied successfully."
+            );
 
         }
 
@@ -490,7 +623,9 @@
 
             textInput.value = "";
 
-            showMessage("Text cleared.");
+            showMessage(
+                "Text cleared."
+            );
 
         }
 
