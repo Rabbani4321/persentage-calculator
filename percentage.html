@@ -4,42 +4,28 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Mobile Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Title -->
-    <title>
-        Percentage Calculator - Free Online Calculator | Creator Toolkit
-    </title>
+    <title>Percentage Calculator - Free Online Calculator | Creator Toolkit</title>
 
-    <!-- SEO Description -->
     <meta
         name="description"
-        content="Free online percentage calculator. Calculate percentages, find percentage of a number, calculate percentage change, and solve percentage problems easily."
+        content="Use this free percentage calculator to find a percentage of a number, calculate what percentage one number is of another, and calculate percentage change online."
     >
 
-    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="percentage calculator, percentage calculator online, free percentage calculator, calculate percentage, percentage change calculator"
+        content="percentage calculator, percentage calculator online, free percentage calculator, calculate percentage, percentage of a number, percentage change calculator"
     >
 
-    <!-- Author -->
-    <meta
-        name="author"
-        content="Creator Toolkit"
-    >
+    <meta name="author" content="Creator Toolkit">
 
-    <!-- Search Engine Instructions -->
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+    <meta name="robots" content="index, follow">
 
-    <!-- Canonical URL -->
+    <!-- Correct Canonical URL -->
     <link
         rel="canonical"
-        href="https://rabbani4321.github.io/persentage-calculator/"
+        href="https://rabbani4321.github.io/persentage-calculator/percentage.html"
     >
 
     <!-- Open Graph -->
@@ -50,12 +36,12 @@
 
     <meta
         property="og:description"
-        content="Calculate percentages quickly with this free online percentage calculator."
+        content="Calculate percentages, find percentage of a number, and calculate percentage change with this free online calculator."
     >
 
     <meta
         property="og:url"
-        content="https://rabbani4321.github.io/persentage-calculator/"
+        content="https://rabbani4321.github.io/persentage-calculator/percentage.html"
     >
 
     <meta
@@ -63,17 +49,14 @@
         content="website"
     >
 
-    <!-- Website Icon -->
-    <link
-        rel="icon"
-        href="data:,"
+    <meta
+        property="og:site_name"
+        content="Creator Toolkit"
     >
 
     <!-- CSS -->
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
+
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -81,10 +64,58 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Percentage Calculator",
-        "url": "https://rabbani4321.github.io/persentage-calculator/",
+        "url": "https://rabbani4321.github.io/persentage-calculator/percentage.html",
         "description": "Free online percentage calculator for calculating percentages, percentage of a number, and percentage change.",
         "applicationCategory": "Calculator",
-        "operatingSystem": "All"
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I calculate percentage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Divide the part by the whole and multiply the result by 100. The formula is Percentage = (Part ÷ Whole) × 100."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is 20% of 500?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "20% of 500 is 100."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this percentage calculator on mobile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The percentage calculator is designed to work on smartphones, tablets and computers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this percentage calculator free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You can use the percentage calculator online for free."
+                }
+            }
+        ]
     }
     </script>
 
@@ -93,8 +124,7 @@
 
 <body>
 
-    <!-- ==================== HEADER ==================== -->
-
+    <!-- Header -->
     <header>
 
         <h1>
@@ -108,13 +138,30 @@
     </header>
 
 
-    <!-- ==================== MAIN ==================== -->
-
     <main>
 
+        <!-- Breadcrumb / Home Link -->
+        <section class="info-section">
 
-        <!-- ==================== CALCULATOR 1 ==================== -->
+            <p>
+                <a href="index.html">
+                    ← Back to Creator Toolkit
+                </a>
+            </p>
 
+            <h2>
+                Calculate Percentages Online
+            </h2>
+
+            <p>
+                Use this free percentage calculator to quickly solve
+                common percentage problems.
+            </p>
+
+        </section>
+
+
+        <!-- Calculator 1 -->
         <section class="calculator-section">
 
             <h2>
@@ -132,7 +179,6 @@
                 inputmode="decimal"
             >
 
-
             <label for="number">
                 Number
             </label>
@@ -144,7 +190,6 @@
                 inputmode="decimal"
             >
 
-
             <button
                 type="button"
                 onclick="calculatePercentage()"
@@ -152,14 +197,12 @@
                 Calculate
             </button>
 
-
             <button
                 type="button"
                 onclick="clearCalculator()"
             >
                 Clear
             </button>
-
 
             <div
                 id="result"
@@ -169,15 +212,12 @@
         </section>
 
 
-
-        <!-- ==================== CALCULATOR 2 ==================== -->
-
+        <!-- Calculator 2 -->
         <section class="calculator-section">
 
             <h2>
                 What Percentage is X of Y?
             </h2>
-
 
             <label for="part">
                 Part
@@ -190,7 +230,6 @@
                 inputmode="decimal"
             >
 
-
             <label for="whole">
                 Whole
             </label>
@@ -202,14 +241,12 @@
                 inputmode="decimal"
             >
 
-
             <button
                 type="button"
                 onclick="calculatePartPercentage()"
             >
                 Calculate
             </button>
-
 
             <div
                 id="percentageResult"
@@ -219,15 +256,12 @@
         </section>
 
 
-
-        <!-- ==================== CALCULATOR 3 ==================== -->
-
+        <!-- Calculator 3 -->
         <section class="calculator-section">
 
             <h2>
                 Percentage Change Calculator
             </h2>
-
 
             <label for="oldValue">
                 Old Value
@@ -240,7 +274,6 @@
                 inputmode="decimal"
             >
 
-
             <label for="newValue">
                 New Value
             </label>
@@ -252,14 +285,12 @@
                 inputmode="decimal"
             >
 
-
             <button
                 type="button"
                 onclick="calculatePercentageChange()"
             >
                 Calculate
             </button>
-
 
             <div
                 id="changeResult"
@@ -269,51 +300,43 @@
         </section>
 
 
-
-        <!-- ==================== INFORMATION ==================== -->
-
+        <!-- Information -->
         <section class="info-section">
 
             <h2>
                 Percentage Calculator Online
             </h2>
 
-
             <p>
                 This free percentage calculator helps you calculate
-                percentages quickly and easily.
+                percentages quickly and easily without doing the
+                calculations manually.
             </p>
-
 
             <p>
                 You can find a percentage of a number, determine what
                 percentage one number is of another, and calculate
-                percentage change.
+                percentage increase or decrease.
             </p>
 
-
             <p>
-                The calculator is designed to be simple and easy to use
-                on mobile phones, tablets and computers.
+                The calculator works directly in your browser and is
+                designed for smartphones, tablets and computers.
             </p>
 
         </section>
 
 
-
-        <!-- ==================== FORMULA ==================== -->
-
+        <!-- Formula -->
         <section class="info-section">
 
             <h2>
                 Percentage Formula
             </h2>
 
-
             <p>
                 The basic percentage formula is:
             </p>
-
 
             <p>
                 <strong>
@@ -321,11 +344,9 @@
                 </strong>
             </p>
 
-
             <p>
                 For example, if you scored 80 marks out of 100 marks:
             </p>
-
 
             <p>
                 <strong>
@@ -336,15 +357,12 @@
         </section>
 
 
-
-        <!-- ==================== EXAMPLES ==================== -->
-
+        <!-- Examples -->
         <section class="info-section">
 
             <h2>
                 Percentage Calculation Examples
             </h2>
-
 
             <h3>
                 Example 1: Find a percentage of a number
@@ -354,7 +372,6 @@
                 20% of 500 = (20 ÷ 100) × 500 = 100
             </p>
 
-
             <h3>
                 Example 2: Find what percentage one number is of another
             </h3>
@@ -363,28 +380,24 @@
                 25 out of 100 = (25 ÷ 100) × 100 = 25%
             </p>
 
-
             <h3>
                 Example 3: Calculate percentage change
             </h3>
 
             <p>
-                If a value changes from 100 to 120,
-                the percentage change is 20%.
+                If a value changes from 100 to 120, the percentage
+                change is 20%.
             </p>
 
         </section>
 
 
-
-        <!-- ==================== FAQ ==================== -->
-
+        <!-- FAQ -->
         <section class="faq-section">
 
             <h2>
                 Frequently Asked Questions
             </h2>
-
 
             <h3>
                 How do I calculate percentage?
@@ -395,7 +408,6 @@
                 by 100.
             </p>
 
-
             <h3>
                 What is 20% of 500?
             </h3>
@@ -404,16 +416,14 @@
                 20% of 500 is 100.
             </p>
 
-
             <h3>
-                Can I use this calculator on mobile?
+                Can I use this percentage calculator on mobile?
             </h3>
 
             <p>
                 Yes. The percentage calculator is designed to work on
                 smartphones, tablets and computers.
             </p>
-
 
             <h3>
                 Is this percentage calculator free?
@@ -429,47 +439,38 @@
     </main>
 
 
-
-    <!-- ==================== FOOTER ==================== -->
-
+    <!-- Footer -->
     <footer>
 
         <p>
             © 2026 Creator Toolkit. All rights reserved.
         </p>
 
-
         <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
 
             <a href="about.html">
                 About Us
             </a>
 
-
-            <span>
-                |
-            </span>
-
+            <span>|</span>
 
             <a href="contact.html">
                 Contact Us
             </a>
 
-
-            <span>
-                |
-            </span>
-
+            <span>|</span>
 
             <a href="privacy.html">
                 Privacy Policy
             </a>
 
-
-            <span>
-                |
-            </span>
-
+            <span>|</span>
 
             <a href="terms.html">
                 Terms &amp; Conditions
@@ -480,11 +481,8 @@
     </footer>
 
 
-
-    <!-- ==================== JAVASCRIPT ==================== -->
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
-
 
 </body>
 
