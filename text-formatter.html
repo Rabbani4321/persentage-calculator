@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Text Formatter - Free Online Text Formatting Tool | Creator Toolkit
+    </title>
+
+    <meta
+        name="description"
+        content="Free online text formatter. Convert text to uppercase, lowercase, title case and clean extra spaces with Creator Toolkit."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .formatter-container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+
+        .formatter-textarea {
+            width: 100%;
+            min-height: 280px;
+
+            padding: 18px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+
+            font-size: 16px;
+            line-height: 1.6;
+
+            resize: vertical;
+            outline: none;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        .formatter-textarea:focus {
+            border-color: #4f46e5;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(79, 70, 229, 0.1);
+        }
+
+
+        .button-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+
+        .button-grid button {
+            margin-top: 0;
+        }
+
+
+        .clear-button {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+
+        .clear-button:hover {
+            background: #d1d5db;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            Text Formatter
+        </h1>
+
+        <p>
+            Free Online Text Formatting Tool
+        </p>
+
+    </header>
+
+
+
+    <main class="formatter-container">
+
+
+        <!-- Text Formatter -->
+
+        <section class="calculator-section">
+
+            <h2>
+                Format Your Text
+            </h2>
+
+            <p>
+                Type or paste your text below and use the buttons
+                to format it instantly.
+            </p>
+
+
+            <textarea
+                id="textInput"
+                class="formatter-textarea"
+                placeholder="Type or paste your text here..."
+            ></textarea>
+
+
+            <!-- Buttons -->
+
+            <div class="button-grid">
+
+                <button
+                    type="button"
+                    onclick="convertUppercase()"
+                >
+                    UPPERCASE
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="convertLowercase()"
+                >
+                    lowercase
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="convertTitleCase()"
+                >
+                    Title Case
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="removeExtraSpaces()"
+                >
+                    Remove Extra Spaces
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="copyText()"
+                >
+                    Copy Text
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="clearText()"
+                    class="clear-button"
+                >
+                    Clear Text
+                </button>
+
+            </div>
+
+
+            <p
+                id="message"
+                style="
+                    text-align:center;
+                    margin-top:15px;
+                    font-weight:bold;
+                "
+            ></p>
+
+        </section>
+
+
+
+        <!-- About -->
+
+        <section class="info-section">
+
+            <h2>
+                About Our Text Formatter
+            </h2>
+
+            <p>
+                Creator Toolkit's free text formatter helps you
+                quickly change and clean your text.
+            </p>
+
+            <p>
+                You can convert text to uppercase, lowercase,
+                title case and remove unnecessary spaces.
+            </p>
+
+            <p>
+                This tool is useful for students, writers,
+                bloggers, content creators and anyone who works
+                with text.
+            </p>
+
+        </section>
+
+
+
+        <!-- How To Use -->
+
+        <section class="info-section">
+
+            <h2>
+                How to Use the Text Formatter
+            </h2>
+
+
+            <h3>
+                Step 1
+            </h3>
+
+            <p>
+                Type or paste your text into the text box.
+            </p>
+
+
+            <h3>
+                Step 2
+            </h3>
+
+            <p>
+                Choose a formatting option such as uppercase,
+                lowercase or title case.
+            </p>
+
+
+            <h3>
+                Step 3
+            </h3>
+
+            <p>
+                Use the Copy Text button to copy your formatted
+                text.
+            </p>
+
+        </section>
+
+
+
+        <!-- FAQ -->
+
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                Is this text formatter free?
+            </h3>
+
+            <p>
+                Yes. The Creator Toolkit text formatter is free
+                to use.
+            </p>
+
+
+            <h3>
+                Can I use this tool on mobile?
+            </h3>
+
+            <p>
+                Yes. The tool is designed to work on smartphones,
+                tablets and computers.
+            </p>
+
+
+            <h3>
+                Does this tool store my text?
+            </h3>
+
+            <p>
+                The formatting functions run directly in your
+                browser.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Creator Toolkit. All rights reserved.
+        </p>
+
+
+        <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <span>|</span>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <span>|</span>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const textInput =
+            document.getElementById("textInput");
+
+
+        const message =
+            document.getElementById("message");
+
+
+        function showMessage(text) {
+
+            message.textContent = text;
+
+            setTimeout(function () {
+
+                message.textContent = "";
+
+            }, 2000);
+
+        }
+
+
+        /* UPPERCASE */
+
+        function convertUppercase() {
+
+            textInput.value =
+                textInput.value.toUpperCase();
+
+            showMessage("Text converted to uppercase.");
+
+        }
+
+
+        /* lowercase */
+
+        function convertLowercase() {
+
+            textInput.value =
+                textInput.value.toLowerCase();
+
+            showMessage("Text converted to lowercase.");
+
+        }
+
+
+        /* Title Case */
+
+        function convertTitleCase() {
+
+            const text =
+                textInput.value.toLowerCase();
+
+            textInput.value =
+                text.replace(
+                    /\b\w/g,
+                    function (character) {
+
+                        return character.toUpperCase();
+
+                    }
+                );
+
+            showMessage("Text converted to title case.");
+
+        }
+
+
+        /* Remove Extra Spaces */
+
+        function removeExtraSpaces() {
+
+            textInput.value =
+                textInput.value
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+            showMessage("Extra spaces removed.");
+
+        }
+
+
+        /* Copy Text */
+
+        function copyText() {
+
+            if (textInput.value.trim() === "") {
+
+                showMessage("Please enter some text first.");
+
+                return;
+
+            }
+
+
+            navigator.clipboard.writeText(
+                textInput.value
+            );
+
+
+            showMessage("Text copied successfully.");
+
+        }
+
+
+        /* Clear Text */
+
+        function clearText() {
+
+            textInput.value = "";
+
+            showMessage("Text cleared.");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

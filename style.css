@@ -1,0 +1,485 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+
+    padding: 0 15px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    max-width: 900px;
+
+    margin: 30px auto 25px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    font-size: 32px;
+
+    color: #1f2937;
+
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+main {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   CALCULATOR SECTIONS
+================================ */
+
+.calculator-section {
+    background: #ffffff;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-section h2 {
+    font-size: 21px;
+
+    color: #1f2937;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   LABELS
+================================ */
+
+label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #374151;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   INPUTS
+================================ */
+
+input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #4f46e5;
+
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* ================================
+   SECOND BUTTON
+================================ */
+
+button + button {
+    margin-top: 10px;
+
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+button + button:hover {
+    background: #d1d5db;
+}
+
+
+/* ================================
+   CALCULATOR RESULTS
+================================ */
+
+#result,
+#percentageResult,
+#changeResult {
+    margin-top: 18px;
+
+    padding: 14px;
+
+    min-height: 48px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    color: #111827;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ================================
+   INFORMATION SECTIONS
+================================ */
+
+.info-section,
+.faq-section {
+    background: #ffffff;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.info-section h2,
+.faq-section h2 {
+    font-size: 24px;
+
+    margin-bottom: 18px;
+
+    color: #1f2937;
+}
+
+.info-section h3,
+.faq-section h3 {
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+.info-section p,
+.faq-section p {
+    color: #4b5563;
+
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    max-width: 900px;
+
+    margin: 30px auto 0;
+
+    padding: 25px 15px 35px;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 12px;
+}
+
+footer nav {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+footer a {
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 0 10px;
+    }
+
+    header {
+        margin-top: 15px;
+
+        padding: 25px 15px;
+
+        border-radius: 16px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .calculator-section,
+    .info-section,
+    .faq-section {
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+    .calculator-section h2 {
+        font-size: 19px;
+    }
+
+    .info-section h2,
+    .faq-section h2 {
+        font-size: 21px;
+    }
+
+    footer nav {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    footer nav span {
+        display: none;
+    }
+}
+/* ================================
+   CREATOR TOOLKIT - TOOL CARDS
+================================ */
+
+.info-section > .calculator-section {
+    background: #ffffff;
+
+    padding: 25px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.25s ease;
+}
+
+
+/* Card Hover */
+
+.info-section > .calculator-section:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Tool Card Heading */
+
+.info-section > .calculator-section h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #1f2937;
+}
+
+
+/* Tool Card Description */
+
+.info-section > .calculator-section p {
+    color: #6b7280;
+
+    margin-bottom: 18px;
+}
+
+
+/* Tool Link */
+
+.info-section > .calculator-section a {
+    text-decoration: none;
+
+    display: block;
+}
+
+
+/* Tool Buttons */
+
+.info-section > .calculator-section button {
+    margin-top: 5px;
+}
+
+
+/* Disabled Coming Soon Buttons */
+
+.info-section > .calculator-section button:disabled {
+    background: #e5e7eb;
+
+    color: #6b7280;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .info-section > .calculator-section {
+        padding: 20px;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-section > .calculator-section h2 {
+        font-size: 19px;
+    }
+
+}

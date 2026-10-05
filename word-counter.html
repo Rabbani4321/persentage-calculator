@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Word Counter - Free Online Word Counter | Creator Toolkit</title>
+
+    <meta
+        name="description"
+        content="Free online word counter. Count words, characters, sentences and paragraphs quickly with Creator Toolkit."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .word-counter-container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .text-area {
+            width: 100%;
+            min-height: 300px;
+            padding: 18px;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            font-size: 16px;
+            line-height: 1.6;
+            resize: vertical;
+            outline: none;
+        }
+
+        .text-area:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .counter-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .counter-box h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .counter-box strong {
+            font-size: 28px;
+            color: #1f2937;
+        }
+
+        .clear-button {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .clear-button:hover {
+            background: #d1d5db;
+        }
+
+        @media (max-width: 700px) {
+
+            .counter-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .counter-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            Word Counter
+        </h1>
+
+        <p>
+            Free Online Word & Character Counter
+        </p>
+
+    </header>
+
+
+
+    <main class="word-counter-container">
+
+
+        <!-- Tool -->
+
+        <section class="calculator-section">
+
+            <h2>
+                Count Your Words
+            </h2>
+
+            <p>
+                Enter or paste your text below to instantly count
+                words, characters, sentences and paragraphs.
+            </p>
+
+
+            <textarea
+                id="textInput"
+                class="text-area"
+                placeholder="Type or paste your text here..."
+                oninput="countText()"
+            ></textarea>
+
+
+            <button
+                type="button"
+                onclick="clearText()"
+                class="clear-button"
+            >
+                Clear Text
+            </button>
+
+
+            <!-- Counters -->
+
+            <div class="counter-grid">
+
+                <div class="counter-box">
+
+                    <h3>
+                        Words
+                    </h3>
+
+                    <strong id="wordCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="counter-box">
+
+                    <h3>
+                        Characters
+                    </h3>
+
+                    <strong id="characterCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="counter-box">
+
+                    <h3>
+                        Sentences
+                    </h3>
+
+                    <strong id="sentenceCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="counter-box">
+
+                    <h3>
+                        Paragraphs
+                    </h3>
+
+                    <strong id="paragraphCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Information -->
+
+        <section class="info-section">
+
+            <h2>
+                About Our Word Counter
+            </h2>
+
+            <p>
+                Our free online word counter helps you quickly count
+                the number of words and characters in your text.
+            </p>
+
+            <p>
+                It can also count sentences and paragraphs, making it
+                useful for students, writers, bloggers, creators and
+                anyone who works with text.
+            </p>
+
+        </section>
+
+
+
+        <!-- How To Use -->
+
+        <section class="info-section">
+
+            <h2>
+                How to Use the Word Counter
+            </h2>
+
+            <h3>
+                Step 1
+            </h3>
+
+            <p>
+                Type or paste your text into the text box.
+            </p>
+
+            <h3>
+                Step 2
+            </h3>
+
+            <p>
+                The tool will automatically calculate your word,
+                character, sentence and paragraph counts.
+            </p>
+
+            <h3>
+                Step 3
+            </h3>
+
+            <p>
+                Use the Clear Text button to remove the text and
+                start again.
+            </p>
+
+        </section>
+
+
+
+        <!-- FAQ -->
+
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                Is this word counter free?
+            </h3>
+
+            <p>
+                Yes. The Creator Toolkit word counter is free to use.
+            </p>
+
+
+            <h3>
+                Can I use it on mobile?
+            </h3>
+
+            <p>
+                Yes. The tool is designed to work on smartphones,
+                tablets and computers.
+            </p>
+
+
+            <h3>
+                Does it count characters?
+            </h3>
+
+            <p>
+                Yes. It displays the total number of characters
+                in your text.
+            </p>
+
+
+            <h3>
+                Does the tool store my text?
+            </h3>
+
+            <p>
+                This browser-based counter processes the text entered
+                into the tool to calculate the displayed counts.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Creator Toolkit. All rights reserved.
+        </p>
+
+
+        <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <span>|</span>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <span>|</span>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+
+    <!-- Word Counter JavaScript -->
+
+    <script>
+
+        function countText() {
+
+            const text =
+                document.getElementById("textInput").value;
+
+
+            /* Words */
+
+            const trimmedText = text.trim();
+
+            let words = 0;
+
+            if (trimmedText.length > 0) {
+
+                words = trimmedText.split(/\s+/).length;
+
+            }
+
+
+            /* Characters */
+
+            const characters = text.length;
+
+
+            /* Sentences */
+
+            let sentences = 0;
+
+            if (trimmedText.length > 0) {
+
+                sentences =
+                    trimmedText
+                        .split(/[.!?]+/)
+                        .filter(sentence => sentence.trim().length > 0)
+                        .length;
+
+            }
+
+
+            /* Paragraphs */
+
+            let paragraphs = 0;
+
+            if (trimmedText.length > 0) {
+
+                paragraphs =
+                    trimmedText
+                        .split(/\n\s*\n/)
+                        .filter(paragraph => paragraph.trim().length > 0)
+                        .length;
+
+            }
+
+
+            /* Display Results */
+
+            document.getElementById("wordCount").textContent =
+                words;
+
+            document.getElementById("characterCount").textContent =
+                characters;
+
+            document.getElementById("sentenceCount").textContent =
+                sentences;
+
+            document.getElementById("paragraphCount").textContent =
+                paragraphs;
+
+        }
+
+
+        function clearText() {
+
+            document.getElementById("textInput").value = "";
+
+            countText();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

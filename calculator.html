@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Calculator - Free Online Calculator | Creator Toolkit
+    </title>
+
+    <meta
+        name="description"
+        content="Free online calculator for addition, subtraction, multiplication, division and percentage calculations."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <style>
+
+        .calculator-container {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+
+        .calculator-box {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e5e7eb;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.06);
+        }
+
+
+        .calculator-display {
+            width: 100%;
+
+            height: 80px;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #d1d5db;
+
+            border-radius: 12px;
+
+            background: #f9fafb;
+
+            color: #111827;
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            text-align: right;
+
+            outline: none;
+        }
+
+
+        .calculator-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+        }
+
+
+        .calculator-grid button {
+
+            width: 100%;
+
+            height: 60px;
+
+            margin: 0;
+
+            padding: 0;
+
+            border: none;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+
+        .number-btn {
+
+            background: #f3f4f6;
+
+            color: #1f2937;
+
+        }
+
+
+        .number-btn:hover {
+
+            background: #e5e7eb;
+
+        }
+
+
+        .operator-btn {
+
+            background: #4f46e5;
+
+            color: white;
+
+        }
+
+
+        .operator-btn:hover {
+
+            background: #4338ca;
+
+        }
+
+
+        .clear-btn {
+
+            background: #dc2626;
+
+            color: white;
+
+        }
+
+
+        .clear-btn:hover {
+
+            background: #b91c1c;
+
+        }
+
+
+        .delete-btn {
+
+            background: #f59e0b;
+
+            color: white;
+
+        }
+
+
+        .delete-btn:hover {
+
+            background: #d97706;
+
+        }
+
+
+        .equal-btn {
+
+            background: #059669;
+
+            color: white;
+
+        }
+
+
+        .equal-btn:hover {
+
+            background: #047857;
+
+        }
+
+
+        .zero-btn {
+
+            grid-column: span 2;
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .calculator-box {
+
+                padding: 18px;
+
+            }
+
+
+            .calculator-display {
+
+                height: 70px;
+
+                font-size: 25px;
+
+            }
+
+
+            .calculator-grid button {
+
+                height: 55px;
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            Calculator
+        </h1>
+
+        <p>
+            Free Online Calculator
+        </p>
+
+    </header>
+
+
+
+    <main class="calculator-container">
+
+
+        <!-- CALCULATOR -->
+
+        <section class="calculator-box">
+
+
+            <!-- DISPLAY -->
+
+            <input
+                type="text"
+                id="display"
+                class="calculator-display"
+                value="0"
+                readonly
+            >
+
+
+            <!-- BUTTONS -->
+
+            <div class="calculator-grid">
+
+
+                <!-- ROW 1 -->
+
+                <button
+                    type="button"
+                    class="clear-btn"
+                    onclick="clearCalculator()"
+                >
+                    C
+                </button>
+
+
+                <button
+                    type="button"
+                    class="delete-btn"
+                    onclick="deleteLast()"
+                >
+                    ⌫
+                </button>
+
+
+                <button
+                    type="button"
+                    class="operator-btn"
+                    onclick="addValue('%')"
+                >
+                    %
+                </button>
+
+
+                <button
+                    type="button"
+                    class="operator-btn"
+                    onclick="addValue('/')"
+                >
+                    ÷
+                </button>
+
+
+
+                <!-- ROW 2 -->
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('7')"
+                >
+                    7
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('8')"
+                >
+                    8
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('9')"
+                >
+                    9
+                </button>
+
+
+                <button
+                    type="button"
+                    class="operator-btn"
+                    onclick="addValue('*')"
+                >
+                    ×
+                </button>
+
+
+
+                <!-- ROW 3 -->
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('4')"
+                >
+                    4
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('5')"
+                >
+                    5
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('6')"
+                >
+                    6
+                </button>
+
+
+                <button
+                    type="button"
+                    class="operator-btn"
+                    onclick="addValue('-')"
+                >
+                    −
+                </button>
+
+
+
+                <!-- ROW 4 -->
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('1')"
+                >
+                    1
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('2')"
+                >
+                    2
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('3')"
+                >
+                    3
+                </button>
+
+
+                <button
+                    type="button"
+                    class="operator-btn"
+                    onclick="addValue('+')"
+                >
+                    +
+                </button>
+
+
+
+                <!-- ROW 5 -->
+
+                <button
+                    type="button"
+                    class="number-btn zero-btn"
+                    onclick="addValue('0')"
+                >
+                    0
+                </button>
+
+
+                <button
+                    type="button"
+                    class="number-btn"
+                    onclick="addValue('.')"
+                >
+                    .
+                </button>
+
+
+                <button
+                    type="button"
+                    class="equal-btn"
+                    onclick="calculateResult()"
+                >
+                    =
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section class="info-section">
+
+            <h2>
+                About Our Calculator
+            </h2>
+
+            <p>
+                Creator Toolkit's free online calculator helps
+                you perform everyday mathematical calculations.
+            </p>
+
+            <p>
+                You can perform addition, subtraction,
+                multiplication, division and percentage
+                calculations.
+            </p>
+
+        </section>
+
+
+
+        <!-- HOW TO USE -->
+
+        <section class="info-section">
+
+            <h2>
+                How to Use the Calculator
+            </h2>
+
+
+            <h3>
+                Step 1
+            </h3>
+
+            <p>
+                Click the numbers you want to calculate.
+            </p>
+
+
+            <h3>
+                Step 2
+            </h3>
+
+            <p>
+                Select an operator such as +, −, × or ÷.
+            </p>
+
+
+            <h3>
+                Step 3
+            </h3>
+
+            <p>
+                Click = to see the result.
+            </p>
+
+
+            <h3>
+                Step 4
+            </h3>
+
+            <p>
+                Use C to clear the calculation or ⌫ to
+                delete the last character.
+            </p>
+
+        </section>
+
+
+
+        <!-- FAQ -->
+
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                Is this calculator free?
+            </h3>
+
+            <p>
+                Yes. The Creator Toolkit calculator is free
+                to use.
+            </p>
+
+
+            <h3>
+                Can I use it on mobile?
+            </h3>
+
+            <p>
+                Yes. It works on smartphones, tablets and
+                computers.
+            </p>
+
+
+            <h3>
+                Can it calculate percentages?
+            </h3>
+
+            <p>
+                Yes. The calculator includes a percentage
+                button.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Creator Toolkit. All rights reserved.
+        </p>
+
+
+        <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
+
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <span>|</span>
+
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <span>|</span>
+
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let expression = "";
+
+
+        const display =
+            document.getElementById("display");
+
+
+
+        // Add number or operator
+
+        function addValue(value) {
+
+            // If previous result was Error
+
+            if (
+                display.value === "Error"
+            ) {
+
+                expression = "";
+
+                display.value = "0";
+
+            }
+
+
+
+            // Percentage
+
+            if (value === "%") {
+
+                if (expression === "") {
+
+                    return;
+
+                }
+
+
+                const lastCharacter =
+                    expression[
+                        expression.length - 1
+                    ];
+
+
+                if (
+                    lastCharacter >= "0"
+                    &&
+                    lastCharacter <= "9"
+                ) {
+
+                    expression += "%";
+
+                    display.value =
+                        expression;
+
+                }
+
+                return;
+
+            }
+
+
+
+            // Decimal
+
+            if (value === ".") {
+
+                const parts =
+                    expression.split(
+                        /[+\-*/]/
+                    );
+
+
+                const currentNumber =
+                    parts[
+                        parts.length - 1
+                    ];
+
+
+                if (
+                    currentNumber.includes(".")
+                ) {
+
+                    return;
+
+                }
+
+            }
+
+
+
+            // Operators
+
+            if (
+                value === "+"
+                ||
+                value === "-"
+                ||
+                value === "*"
+                ||
+                value === "/"
+            ) {
+
+                if (expression === "") {
+
+                    if (value === "-") {
+
+                        expression = "-";
+
+                        display.value =
+                            expression;
+
+                    }
+
+                    return;
+
+                }
+
+
+                const lastCharacter =
+                    expression[
+                        expression.length - 1
+                    ];
+
+
+                if (
+                    lastCharacter === "+"
+                    ||
+                    lastCharacter === "-"
+                    ||
+                    lastCharacter === "*"
+                    ||
+                    lastCharacter === "/"
+                ) {
+
+                    expression =
+                        expression.slice(
+                            0,
+                            -1
+                        )
+                        +
+                        value;
+
+                    display.value =
+                        expression;
+
+                    return;
+
+                }
+
+            }
+
+
+
+            expression += value;
+
+
+            display.value =
+                expression;
+
+        }
+
+
+
+        // Clear
+
+        function clearCalculator() {
+
+            expression = "";
+
+            display.value = "0";
+
+        }
+
+
+
+        // Delete last character
+
+        function deleteLast() {
+
+            if (
+                expression.length === 0
+            ) {
+
+                return;
+
+            }
+
+
+            expression =
+                expression.slice(
+                    0,
+                    -1
+                );
+
+
+            if (
+                expression === ""
+            ) {
+
+                display.value = "0";
+
+            }
+
+            else {
+
+                display.value =
+                    expression;
+
+            }
+
+        }
+
+
+
+        // Calculate
+
+        function calculateResult() {
+
+            if (
+                expression === ""
+            ) {
+
+                return;
+
+            }
+
+
+            try {
+
+                let calculation =
+                    expression;
+
+
+
+                // Convert percentage
+
+                calculation =
+                    calculation.replace(
+                        /(\d+(?:\.\d+)?)%/g,
+                        "($1/100)"
+                    );
+
+
+
+                // Security check
+
+                if (
+                    !/^[0-9+\-*/().\s]+$/
+                        .test(calculation)
+                ) {
+
+                    throw new Error(
+                        "Invalid calculation"
+                    );
+
+                }
+
+
+
+                const result =
+                    Function(
+                        '"use strict"; return (' +
+                        calculation +
+                        ')'
+                    )();
+
+
+
+                if (
+                    !Number.isFinite(result)
+                ) {
+
+                    throw new Error(
+                        "Invalid result"
+                    );
+
+                }
+
+
+
+                const finalResult =
+                    Number(
+                        result.toFixed(10)
+                    );
+
+
+                display.value =
+                    finalResult;
+
+
+                expression =
+                    String(
+                        finalResult
+                    );
+
+            }
+
+
+            catch (error) {
+
+                display.value =
+                    "Error";
+
+                expression = "";
+
+            }
+
+        }
+
+
+
+        // Keyboard support
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                const key =
+                    event.key;
+
+
+                if (
+                    "0123456789+-*/.%"
+                        .includes(key)
+                ) {
+
+                    event.preventDefault();
+
+                    addValue(key);
+
+                }
+
+
+                else if (
+                    key === "Enter"
+                    ||
+                    key === "="
+                ) {
+
+                    event.preventDefault();
+
+                    calculateResult();
+
+                }
+
+
+                else if (
+                    key === "Backspace"
+                ) {
+
+                    event.preventDefault();
+
+                    deleteLast();
+
+                }
+
+
+                else if (
+                    key === "Escape"
+                ) {
+
+                    event.preventDefault();
+
+                    clearCalculator();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

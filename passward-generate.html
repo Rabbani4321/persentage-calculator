@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Generator - Free Strong Password Generator | Creator Toolkit</title>
+
+    <meta
+        name="description"
+        content="Free online password generator. Create strong random passwords with uppercase letters, lowercase letters, numbers and special characters."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <style>
+
+        .password-container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+
+        .password-output {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+
+        .password-output input {
+            margin-bottom: 0;
+            font-family: monospace;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        .copy-button {
+            width: 140px;
+            margin-top: 0;
+            background: #059669;
+        }
+
+
+        .copy-button:hover {
+            background: #047857;
+        }
+
+
+        .settings {
+            margin-top: 25px;
+        }
+
+
+        .length-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+
+        .length-row input[type="range"] {
+            flex: 1;
+            margin: 0;
+        }
+
+
+        .length-number {
+            width: 90px;
+            margin: 0;
+            text-align: center;
+        }
+
+
+        .options {
+            margin-top: 25px;
+        }
+
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 15px;
+
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+
+        .option input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+
+        .generate-button {
+            margin-top: 10px;
+        }
+
+
+        .strength {
+            margin-top: 20px;
+            padding: 15px;
+
+            text-align: center;
+
+            background: #f5f7fb;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+        }
+
+
+        .strength strong {
+            font-size: 18px;
+        }
+
+
+        .status {
+            min-height: 25px;
+            margin-top: 15px;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            color: #059669;
+        }
+
+
+        .clear-button {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+
+        .clear-button:hover {
+            background: #d1d5db;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .password-output {
+                flex-direction: column;
+            }
+
+
+            .copy-button {
+                width: 100%;
+            }
+
+
+            .length-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+            .length-number {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            Password Generator
+        </h1>
+
+        <p>
+            Create Strong Random Passwords
+        </p>
+
+    </header>
+
+
+
+    <main class="password-container">
+
+
+        <!-- PASSWORD TOOL -->
+
+        <section class="calculator-section">
+
+            <h2>
+                Generate a Strong Password
+            </h2>
+
+
+            <p>
+                Choose your settings and generate a random
+                password instantly.
+            </p>
+
+
+            <!-- PASSWORD -->
+
+            <label for="passwordOutput">
+                Generated Password
+            </label>
+
+
+            <div class="password-output">
+
+                <input
+                    type="text"
+                    id="passwordOutput"
+                    readonly
+                    placeholder="Your password will appear here"
+                >
+
+
+                <button
+                    type="button"
+                    id="copyButton"
+                    class="copy-button"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+
+            <!-- LENGTH -->
+
+            <div class="settings">
+
+                <label for="lengthRange">
+                    Password Length
+                </label>
+
+
+                <div class="length-row">
+
+                    <input
+                        type="range"
+                        id="lengthRange"
+                        min="6"
+                        max="64"
+                        value="16"
+                    >
+
+
+                    <input
+                        type="number"
+                        id="lengthNumber"
+                        class="length-number"
+                        min="6"
+                        max="64"
+                        value="16"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OPTIONS -->
+
+            <div class="options">
+
+                <label class="option">
+
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked
+                    >
+
+                    Include Uppercase Letters (A-Z)
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked
+                    >
+
+                    Include Lowercase Letters (a-z)
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked
+                    >
+
+                    Include Numbers (0-9)
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                        checked
+                    >
+
+                    Include Special Characters (!@#$)
+
+                </label>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <button
+                type="button"
+                id="generateButton"
+                class="generate-button"
+            >
+                Generate Password
+            </button>
+
+
+            <button
+                type="button"
+                id="clearButton"
+                class="clear-button"
+            >
+                Clear
+            </button>
+
+
+
+            <!-- STRENGTH -->
+
+            <div class="strength">
+
+                Password Strength:
+
+                <strong id="strength">
+                    -
+                </strong>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="status"
+                class="status"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section class="info-section">
+
+            <h2>
+                About Our Password Generator
+            </h2>
+
+
+            <p>
+                Creator Toolkit's free password generator creates
+                random passwords based on the options you select.
+            </p>
+
+
+            <p>
+                You can choose the password length and include
+                uppercase letters, lowercase letters, numbers
+                and special characters.
+            </p>
+
+
+            <p>
+                Password generation happens directly in your
+                browser.
+            </p>
+
+        </section>
+
+
+
+        <!-- HOW TO USE -->
+
+        <section class="info-section">
+
+            <h2>
+                How to Use the Password Generator
+            </h2>
+
+
+            <h3>
+                Step 1
+            </h3>
+
+            <p>
+                Choose your password length.
+            </p>
+
+
+            <h3>
+                Step 2
+            </h3>
+
+            <p>
+                Select the character types you want.
+            </p>
+
+
+            <h3>
+                Step 3
+            </h3>
+
+            <p>
+                Click Generate Password.
+            </p>
+
+
+            <h3>
+                Step 4
+            </h3>
+
+            <p>
+                Click Copy to copy your password.
+            </p>
+
+        </section>
+
+
+
+        <!-- FAQ -->
+
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                Is this password generator free?
+            </h3>
+
+            <p>
+                Yes. The Creator Toolkit password generator
+                is free to use.
+            </p>
+
+
+            <h3>
+                Can I choose the password length?
+            </h3>
+
+            <p>
+                Yes. You can choose between 6 and 64 characters.
+            </p>
+
+
+            <h3>
+                Can I include numbers and symbols?
+            </h3>
+
+            <p>
+                Yes. You can enable or disable each character type.
+            </p>
+
+
+            <h3>
+                Is my password sent to a server?
+            </h3>
+
+            <p>
+                The password is generated directly in your browser.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Creator Toolkit. All rights reserved.
+        </p>
+
+
+        <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
+
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <span>|</span>
+
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <span>|</span>
+
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const passwordOutput =
+            document.getElementById("passwordOutput");
+
+
+        const lengthRange =
+            document.getElementById("lengthRange");
+
+
+        const lengthNumber =
+            document.getElementById("lengthNumber");
+
+
+        const uppercase =
+            document.getElementById("uppercase");
+
+
+        const lowercase =
+            document.getElementById("lowercase");
+
+
+        const numbers =
+            document.getElementById("numbers");
+
+
+        const symbols =
+            document.getElementById("symbols");
+
+
+        const generateButton =
+            document.getElementById("generateButton");
+
+
+        const copyButton =
+            document.getElementById("copyButton");
+
+
+        const clearButton =
+            document.getElementById("clearButton");
+
+
+        const strength =
+            document.getElementById("strength");
+
+
+        const status =
+            document.getElementById("status");
+
+
+
+        // Character sets
+
+        const uppercaseChars =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        const lowercaseChars =
+            "abcdefghijklmnopqrstuvwxyz";
+
+        const numberChars =
+            "0123456789";
+
+        const symbolChars =
+            "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+
+
+        // Show status message
+
+        function showStatus(message) {
+
+            status.textContent = message;
+
+
+            setTimeout(function() {
+
+                status.textContent = "";
+
+            }, 2500);
+
+        }
+
+
+
+        // Random character
+
+        function getRandomCharacter(characters) {
+
+            const randomArray =
+                new Uint32Array(1);
+
+            crypto.getRandomValues(
+                randomArray
+            );
+
+            const index =
+                randomArray[0] % characters.length;
+
+            return characters[index];
+
+        }
+
+
+
+        // Shuffle
+
+        function shuffle(array) {
+
+            for (
+                let i = array.length - 1;
+                i > 0;
+                i--
+            ) {
+
+                const randomArray =
+                    new Uint32Array(1);
+
+                crypto.getRandomValues(
+                    randomArray
+                );
+
+                const j =
+                    randomArray[0] % (i + 1);
+
+                const temp =
+                    array[i];
+
+                array[i] =
+                    array[j];
+
+                array[j] =
+                    temp;
+
+            }
+
+            return array;
+
+        }
+
+
+
+        // Generate Password
+
+        function generatePassword() {
+
+            const length =
+                parseInt(
+                    lengthNumber.value,
+                    10
+                );
+
+
+            if (
+                isNaN(length)
+                ||
+                length < 6
+                ||
+                length > 64
+            ) {
+
+                showStatus(
+                    "Password length must be between 6 and 64."
+                );
+
+                return;
+
+            }
+
+
+
+            let characterPool = "";
+
+            let passwordCharacters = [];
+
+
+
+            // Uppercase
+
+            if (uppercase.checked) {
+
+                characterPool +=
+                    uppercaseChars;
+
+                passwordCharacters.push(
+                    getRandomCharacter(
+                        uppercaseChars
+                    )
+                );
+
+            }
+
+
+
+            // Lowercase
+
+            if (lowercase.checked) {
+
+                characterPool +=
+                    lowercaseChars;
+
+                passwordCharacters.push(
+                    getRandomCharacter(
+                        lowercaseChars
+                    )
+                );
+
+            }
+
+
+
+            // Numbers
+
+            if (numbers.checked) {
+
+                characterPool +=
+                    numberChars;
+
+                passwordCharacters.push(
+                    getRandomCharacter(
+                        numberChars
+                    )
+                );
+
+            }
+
+
+
+            // Symbols
+
+            if (symbols.checked) {
+
+                characterPool +=
+                    symbolChars;
+
+                passwordCharacters.push(
+                    getRandomCharacter(
+                        symbolChars
+                    )
+                );
+
+            }
+
+
+
+            // Nothing selected
+
+            if (characterPool === "") {
+
+                showStatus(
+                    "Please select at least one option."
+                );
+
+                return;
+
+            }
+
+
+
+            // Too many required characters
+
+            if (
+                passwordCharacters.length > length
+            ) {
+
+                showStatus(
+                    "Increase the password length."
+                );
+
+                return;
+
+            }
+
+
+
+            // Fill remaining characters
+
+            while (
+                passwordCharacters.length < length
+            ) {
+
+                passwordCharacters.push(
+                    getRandomCharacter(
+                        characterPool
+                    )
+                );
+
+            }
+
+
+
+            // Shuffle
+
+            passwordCharacters =
+                shuffle(
+                    passwordCharacters
+                );
+
+
+
+            // Display password
+
+            passwordOutput.value =
+                passwordCharacters.join("");
+
+
+
+            // Update strength
+
+            updateStrength(
+                length,
+                characterPool.length
+            );
+
+
+            showStatus(
+                "New password generated."
+            );
+
+        }
+
+
+
+        // Strength
+
+        function updateStrength(
+            length,
+            poolLength
+        ) {
+
+            if (
+                length >= 16
+                &&
+                poolLength >= 70
+            ) {
+
+                strength.textContent =
+                    "Very Strong";
+
+            }
+
+            else if (
+                length >= 12
+                &&
+                poolLength >= 50
+            ) {
+
+                strength.textContent =
+                    "Strong";
+
+            }
+
+            else if (
+                length >= 8
+            ) {
+
+                strength.textContent =
+                    "Medium";
+
+            }
+
+            else {
+
+                strength.textContent =
+                    "Weak";
+
+            }
+
+        }
+
+
+
+        // Range slider
+
+        lengthRange.addEventListener(
+            "input",
+            function() {
+
+                lengthNumber.value =
+                    lengthRange.value;
+
+            }
+        );
+
+
+
+        // Number input
+
+        lengthNumber.addEventListener(
+            "input",
+            function() {
+
+                let value =
+                    parseInt(
+                        lengthNumber.value,
+                        10
+                    );
+
+
+                if (isNaN(value)) {
+
+                    return;
+
+                }
+
+
+                if (value < 6) {
+
+                    value = 6;
+
+                }
+
+
+                if (value > 64) {
+
+                    value = 64;
+
+                }
+
+
+                lengthNumber.value =
+                    value;
+
+
+                lengthRange.value =
+                    value;
+
+            }
+        );
+
+
+
+        // Generate button
+
+        generateButton.addEventListener(
+            "click",
+            generatePassword
+        );
+
+
+
+        // Copy button
+
+        copyButton.addEventListener(
+            "click",
+            function() {
+
+                const password =
+                    passwordOutput.value;
+
+
+                if (password === "") {
+
+                    showStatus(
+                        "Generate a password first."
+                    );
+
+                    return;
+
+                }
+
+
+                navigator.clipboard
+                    .writeText(password)
+                    .then(
+                        function() {
+
+                            showStatus(
+                                "Password copied successfully!"
+                            );
+
+                        }
+                    )
+                    .catch(
+                        function() {
+
+                            showStatus(
+                                "Copy failed. Please copy manually."
+                            );
+
+                        }
+                    );
+
+            }
+        );
+
+
+
+        // Clear button
+
+        clearButton.addEventListener(
+            "click",
+            function() {
+
+                passwordOutput.value = "";
+
+                strength.textContent = "-";
+
+                showStatus(
+                    "Password cleared."
+                );
+
+            }
+        );
+
+
+
+        // Generate first password
+
+        generatePassword();
+
+    </script>
+
+
+</body>
+
+</html>

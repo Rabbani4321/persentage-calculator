@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Age Calculator - Free Online Age Calculator | Creator Toolkit</title>
+
+    <meta
+        name="description"
+        content="Free online age calculator. Calculate your exact age in years, months and days using your date of birth."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        .age-container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .date-input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+            margin-bottom: 15px;
+        }
+
+        .date-input:focus {
+            border-color: #4f46e5;
+        }
+
+        .age-result {
+            margin-top: 20px;
+            padding: 20px;
+            min-height: 70px;
+            background: #f5f7fb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .age-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .age-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .age-box h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .age-box strong {
+            font-size: 28px;
+            color: #1f2937;
+        }
+
+        .clear-button {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .clear-button:hover {
+            background: #d1d5db;
+        }
+
+        @media (max-width: 600px) {
+
+            .age-details {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>
+            Age Calculator
+        </h1>
+
+        <p>
+            Calculate Your Exact Age
+        </p>
+
+    </header>
+
+
+
+    <main class="age-container">
+
+
+        <section class="calculator-section">
+
+            <h2>
+                Calculate Your Age
+            </h2>
+
+            <p>
+                Enter your date of birth to calculate your current age.
+            </p>
+
+
+            <label for="birthDate">
+                Date of Birth
+            </label>
+
+
+            <input
+                type="date"
+                id="birthDate"
+                class="date-input"
+            >
+
+
+            <button
+                type="button"
+                onclick="calculateAge()"
+            >
+                Calculate Age
+            </button>
+
+
+            <button
+                type="button"
+                class="clear-button"
+                onclick="clearAge()"
+            >
+                Clear
+            </button>
+
+
+            <div
+                id="ageResult"
+                class="age-result"
+            >
+                Enter your date of birth and click Calculate Age.
+            </div>
+
+
+            <div class="age-details">
+
+
+                <div class="age-box">
+
+                    <h3>
+                        Years
+                    </h3>
+
+                    <strong id="years">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="age-box">
+
+                    <h3>
+                        Months
+                    </h3>
+
+                    <strong id="months">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="age-box">
+
+                    <h3>
+                        Days
+                    </h3>
+
+                    <strong id="days">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="info-section">
+
+            <h2>
+                About Our Age Calculator
+            </h2>
+
+            <p>
+                Creator Toolkit's free age calculator helps you
+                calculate your age using your date of birth.
+            </p>
+
+            <p>
+                The calculator displays your age in years,
+                months and days.
+            </p>
+
+        </section>
+
+
+
+        <section class="info-section">
+
+            <h2>
+                How to Use the Age Calculator
+            </h2>
+
+            <h3>
+                Step 1
+            </h3>
+
+            <p>
+                Select your date of birth.
+            </p>
+
+            <h3>
+                Step 2
+            </h3>
+
+            <p>
+                Click the Calculate Age button.
+            </p>
+
+            <h3>
+                Step 3
+            </h3>
+
+            <p>
+                Your exact age will appear below.
+            </p>
+
+        </section>
+
+
+
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <h3>
+                Is the age calculator free?
+            </h3>
+
+            <p>
+                Yes. The Creator Toolkit age calculator is free to use.
+            </p>
+
+            <h3>
+                Can I use it on mobile?
+            </h3>
+
+            <p>
+                Yes. It works on smartphones, tablets and computers.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 Creator Toolkit. All rights reserved.
+        </p>
+
+
+        <nav aria-label="Footer Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>|</span>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <span>|</span>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <span>|</span>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+
+    <script>
+
+        function calculateAge() {
+
+            const dateValue =
+                document.getElementById("birthDate").value;
+
+
+            if (dateValue === "") {
+
+                document.getElementById("ageResult").textContent =
+                    "Please select your date of birth.";
+
+                return;
+            }
+
+
+            // Date of birth
+
+            const birthDate =
+                new Date(dateValue + "T00:00:00");
+
+
+            // Today's date
+
+            const today =
+                new Date();
+
+
+            // Future date check
+
+            if (birthDate > today) {
+
+                document.getElementById("ageResult").textContent =
+                    "Date of birth cannot be in the future.";
+
+                return;
+            }
+
+
+            let years =
+                today.getFullYear()
+                -
+                birthDate.getFullYear();
+
+
+            let months =
+                today.getMonth()
+                -
+                birthDate.getMonth();
+
+
+            let days =
+                today.getDate()
+                -
+                birthDate.getDate();
+
+
+
+            // Days adjustment
+
+            if (days < 0) {
+
+                months--;
+
+                const lastMonth =
+                    new Date(
+                        today.getFullYear(),
+                        today.getMonth(),
+                        0
+                    );
+
+                days += lastMonth.getDate();
+
+            }
+
+
+
+            // Months adjustment
+
+            if (months < 0) {
+
+                years--;
+
+                months += 12;
+
+            }
+
+
+
+            // Display
+
+            document.getElementById("years").textContent =
+                years;
+
+
+            document.getElementById("months").textContent =
+                months;
+
+
+            document.getElementById("days").textContent =
+                days;
+
+
+            document.getElementById("ageResult").textContent =
+                "Your age is "
+                +
+                years
+                +
+                " years, "
+                +
+                months
+                +
+                " months and "
+                +
+                days
+                +
+                " days.";
+
+        }
+
+
+
+        function clearAge() {
+
+            document.getElementById("birthDate").value = "";
+
+
+            document.getElementById("years").textContent =
+                "0";
+
+
+            document.getElementById("months").textContent =
+                "0";
+
+
+            document.getElementById("days").textContent =
+                "0";
+
+
+            document.getElementById("ageResult").textContent =
+                "Enter your date of birth and click Calculate Age.";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
